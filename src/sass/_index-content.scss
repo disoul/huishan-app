@@ -1,0 +1,25 @@
+@import "compass/css3";
+
+.list {
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	@include display-flex;
+	@include flex-direction(row);
+
+	.select {
+		@include flex(1);
+	}
+}
+
+.footer {
+	height: 10%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	padding-bottom: 0.1rem;
+	img {
+		height: 100%;
+	}
+}
