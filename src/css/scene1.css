@@ -1,0 +1,33 @@
+.list {
+  width: 90%;
+  height: 89%;
+  margin: auto;
+  padding-top: 0.5rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.list .select {
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+.list .select img {
+  width: 30%;
+}
+.list .select:hover {
+  padding-top: 0.1rem;
+}
+
+.footer {
+  height: 11%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 0.1rem;
+}
+.footer img {
+  height: 100%;
+}

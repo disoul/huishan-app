@@ -7,21 +7,31 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<script src="./lib-flexible/src/flexible.js"></script>
+	<script src="./src/js/jquery.js"></script>
+	<script src="./src/js/jquery-mobile.js"></script>
+	<script src="./src/js/scene1.js"></script>
 	<link rel="stylesheet" href="./src/css/index.css">
+	<link rel="stylesheet" href="./src/css/jquery-mobile.css">
 	<title>HuishanPoj</title>
 </head>
 <body>
+	<div class="scene" id="scene1" data-role="page">
 	<div class="list">
 		<div class="select"><img src="./src/image/scene1/01.png" alt=""></div>
 		<div class="select"><img src="./src/image/scene1/02.png" alt=""></div>
 		<div class="select"><img src="./src/image/scene1/03.png" alt=""></div>
-		<div class="select" id="huishan"><img src="./src/image/scene1/04.png" alt=""></div>
+		<a class="select" id="huishan" href="#scene2"><img src="./src/image/scene1/04.png" alt=""></a>
 		<div class="select"><img src="./src/image/scene1/05.png" alt=""></div>
 		<div class="select"><img src="./src/image/scene1/06.png" alt=""></div>
 		<div class="select"><img src="./src/image/scene1/07.png" alt=""></div>
 	</div>
 	<div class="footer">
 		<img src="./src/image/logo.png" alt="">
+	</div>
+	</div>
+
+	<div class="scene" id="scene2" data-role="page">
+
 	</div>
 </body>
 </html>
