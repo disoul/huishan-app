@@ -2,18 +2,26 @@
 
 .list {
 	width: 90%;
-	height: 90%;
+	height: 89%;
 	margin: auto;
+	padding-top: 0.5rem;
 	@include display-flex;
 	@include flex-direction(row);
 
 	.select {
 		@include flex(1);
+		text-align: center;
+		img {
+			width: 30%;
+		}
+		&:hover {
+			padding-top: 0.1rem;
+		}
 	}
 }
 
 .footer {
-	height: 10%;
+	height: 11%;
 	width: 100%;
 	position: absolute;
 	bottom: 0;

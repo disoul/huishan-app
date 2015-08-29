@@ -56,8 +56,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .list {
   width: 90%;
-  height: 90%;
+  height: 89%;
   margin: auto;
+  padding-top: 0.5rem;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -66,10 +67,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .list .select {
   -webkit-flex: 1;
   flex: 1;
+  text-align: center;
+}
+.list .select img {
+  width: 30%;
+}
+.list .select:hover {
+  padding-top: 0.1rem;
 }
 
 .footer {
-  height: 10%;
+  height: 11%;
   width: 100%;
   position: absolute;
   bottom: 0;
