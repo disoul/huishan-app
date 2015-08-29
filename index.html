@@ -10,6 +10,7 @@
 	<script src="./src/js/jquery.js"></script>
 	<script src="./src/js/jquery-mobile.js"></script>
 	<script src="./src/js/select-scene.js"></script>
+	<script src="./src/js/scene3_ani.js"></script>
 	<link rel="stylesheet" href="./src/css/index.css">
 	<link rel="stylesheet" href="./src/css/jquery-mobile.css">
 	<title>HuishanPoj</title>
@@ -35,14 +36,19 @@
 		<div class="footer"><img src="./src/image/load-scene/footer-logo.jpg" alt=""></div>
 	</div>
 
-	<div id="main-scene" class="scene">
+	<div id="main-scene" class="scene" data-role="page">
 		<div class="background-circle" id="left"><img src="./src/image/main-scene/background-circle.jpg" alt=""></div>
 		<div class="background-circle" id="right"><img src="./src/image/main-scene/background-circle.jpg" alt=""></div>
 
 		<div class="left-list"><img src="./src/image/main-scene/left-list.png" alt=""></div>
 		<div class="right-list"><img src="./src/image/main-scene/left-list.png" alt=""></div>
 		<div class="top-list"><img src="./src/image/main-scene/top-list.png" alt=""></div>
-		<div class="canvas"><img src="./src/image/main-scene/canvas.png" alt=""></div>
+		<div class="canvas">
+			<img src="./src/image/main-scene/canvas.png" alt="">
+			<div class="model">
+				<img src="./src/image/main-scene/model.png" alt="">
+			</div>
+		</div>
 	</div>
 </body>
 </html>

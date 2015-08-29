@@ -135,6 +135,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   bottom: 0;
   background-image: url("../image/main-scene/background.jpg");
   background-size: 100% 100%;
+  overflow: hidden;
 }
 #main-scene .background-circle {
   height: 30%;
@@ -152,7 +153,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 #main-scene .left-list {
   position: absolute;
-  top: 0;
+  top: 100000px;
   left: 0.2rem;
   width: 1rem;
   z-index: 10;
@@ -162,7 +163,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 #main-scene .right-list {
   position: absolute;
-  bottom: 0;
+  bottom: 1000000px;
   right: 0.2rem;
   width: 1rem;
   z-index: 10;
@@ -191,6 +192,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 #main-scene .canvas img {
   width: 100%;
+}
+#main-scene .canvas .model {
+  position: absolute;
+  width: 3rem;
+  top: 0.05rem;
+  left: 1.1rem;
 }
 
 * {
