@@ -124,6 +124,75 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 
+#main-scene {
+  height: 100%;
+  width: 100%;
+  background-color: "#000";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../image/main-scene/background.jpg");
+  background-size: 100% 100%;
+}
+#main-scene .background-circle {
+  height: 30%;
+  position: absolute;
+  top: 35%;
+}
+#main-scene .background-circle img {
+  height: 100%;
+}
+#main-scene #right {
+  right: 10%;
+}
+#main-scene #left {
+  left: 10%;
+}
+#main-scene .left-list {
+  position: absolute;
+  top: 0;
+  left: 0.2rem;
+  width: 1rem;
+  z-index: 10;
+}
+#main-scene .left-list img {
+  width: 100%;
+}
+#main-scene .right-list {
+  position: absolute;
+  bottom: 0;
+  right: 0.2rem;
+  width: 1rem;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+#main-scene .right-list img {
+  width: 100%;
+}
+#main-scene .top-list {
+  width: 6.5rem;
+  top: 0.1rem;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+#main-scene .top-list img {
+  width: 100%;
+}
+#main-scene .canvas {
+  width: 5.3rem;
+  margin: auto;
+  z-index: 10;
+  position: absolute;
+  bottom: 0.05rem;
+  right: 2.3rem;
+}
+#main-scene .canvas img {
+  width: 100%;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
