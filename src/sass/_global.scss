@@ -11,3 +11,14 @@
 		font-size: $size * 3;
 	}
 }
+
+@mixin scene($color){
+	height: 100%;
+	width: 100%;
+	background-color: $color;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}

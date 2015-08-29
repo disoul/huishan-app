@@ -9,29 +9,33 @@
 	<script src="./lib-flexible/src/flexible.js"></script>
 	<script src="./src/js/jquery.js"></script>
 	<script src="./src/js/jquery-mobile.js"></script>
-	<script src="./src/js/scene1.js"></script>
+	<script src="./src/js/select-scene.js"></script>
 	<link rel="stylesheet" href="./src/css/index.css">
 	<link rel="stylesheet" href="./src/css/jquery-mobile.css">
 	<title>HuishanPoj</title>
 </head>
 <body>
-	<div class="scene" id="scene1" data-role="page">
+	<div class="scene" id="select-scene" data-role="page">
 	<div class="list">
-		<div class="select"><img src="./src/image/scene1/01.png" alt=""></div>
-		<div class="select"><img src="./src/image/scene1/02.png" alt=""></div>
-		<div class="select"><img src="./src/image/scene1/03.png" alt=""></div>
-		<a class="select" id="huishan" href="#scene2"><img src="./src/image/scene1/04.png" alt=""></a>
-		<div class="select"><img src="./src/image/scene1/05.png" alt=""></div>
-		<div class="select"><img src="./src/image/scene1/06.png" alt=""></div>
-		<div class="select"><img src="./src/image/scene1/07.png" alt=""></div>
+		<div class="select"><img src="./src/image/select-scene/01.png" alt=""></div>
+		<div class="select"><img src="./src/image/select-scene/02.png" alt=""></div>
+		<div class="select"><img src="./src/image/select-scene/03.png" alt=""></div>
+		<a class="select" id="huishan" href="#load-scene"><img src="./src/image/select-scene/04.png" alt=""></a>
+		<div class="select"><img src="./src/image/select-scene/05.png" alt=""></div>
+		<div class="select"><img src="./src/image/select-scene/06.png" alt=""></div>
+		<div class="select"><img src="./src/image/select-scene/07.png" alt=""></div>
 	</div>
 	<div class="footer">
 		<img src="./src/image/logo.png" alt="">
 	</div>
 	</div>
 
-	<div class="scene" id="scene2" data-role="page">
+	<div class="scene" id="load-scene" data-role="page">
+		<a class="logo" href="#main-scene" data-transition="slide"><img src="./src/image/load-scene/loading.jpg" alt=""></a>
+		<div class="footer"><img src="./src/image/load-scene/footer-logo.jpg" alt=""></div>
+	</div>
 
+	<div id="main-scene" class="scene">
 	</div>
 </body>
 </html>

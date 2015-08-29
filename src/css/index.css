@@ -54,10 +54,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-#scene1 {
-  background-color: #7F5221;
+#select-scene {
   height: 100%;
   width: 100%;
+  background-color: #7F5221;
   position: absolute;
   top: 0;
   left: 0;
@@ -97,6 +97,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .footer img {
   height: 100%;
+}
+
+#load-scene {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#load-scene .logo {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#load-scene .logo img {
+  width: 100%;
 }
 
 * {

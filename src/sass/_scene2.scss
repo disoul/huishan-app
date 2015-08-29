@@ -1,0 +1,17 @@
+@import "compass/css3";
+
+#load-scene {
+	bottom: 0;
+	@include scene(#fff);
+	.logo {
+		margin: auto;
+		text-align: center;
+		width: 50%;
+		height: 100%;
+		@include display-flex;
+		@include align-items(center);
+		img {
+			width: 100%;
+		}
+	}
+}
