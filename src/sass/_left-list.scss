@@ -1,0 +1,22 @@
+@import "compass/css3";
+
+.left-list {
+	@include display-flex;
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include align-items(center);
+	margin:auto;
+	.left-iron {
+		width: 85%;
+		@include border-radius(4.25rem);
+		text-align: center;
+		margin: 0.1rem 0 0.1rem 0;
+		&:hover {
+			background-color: $hover-color;
+		}
+		> img {
+			width: 90%;
+			padding-top: 5%;
+		}
+	}
+}
