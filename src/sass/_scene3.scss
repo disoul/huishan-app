@@ -41,17 +41,6 @@
 		}
 	}
 
-	.top-list {
-		width: 6.5rem;
-		top: 0.1rem;
-		margin:auto;	
-		position: relative;
-		z-index: 10;
-		img {
-			width: 100%;
-		}
-	}
-
 	.canvas {
 		width: 5.3rem;
 		margin: auto;
@@ -71,3 +60,14 @@
 	}
 
 }
+.top-list {
+	width: 6.5rem;
+	top: 0.1rem;
+	margin:auto;	
+	position: relative;
+	z-index: 10;
+	img {
+		width: 100%;
+	}
+}
+

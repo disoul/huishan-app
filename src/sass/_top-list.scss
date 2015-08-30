@@ -1,0 +1,29 @@
+@import "compass/css3";
+
+#top-mask {
+	position: absolute;
+	top: 0.1rem;
+	z-index: 11;
+	left: 50%;
+	margin-left: -3.25rem;
+	@include display-flex;
+	text-align: center;
+	> div {
+		@include flex(1);
+		height: 100%;	
+	}
+	.step p{
+		@include fontsize(30px);
+		width: 30px;
+		margin: auto;
+		line-height: 0.20rem;
+		margin-top: 0.15rem;
+		font-family: "方正喵呜体";
+		color: $text-blue-1;
+	}
+
+	.arrow {
+		margin-top: 0.3rem;
+		color: $text-blue-1;
+	}
+}

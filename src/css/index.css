@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -200,16 +201,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #main-scene .right-list > img {
   width: 100%;
 }
-#main-scene .top-list {
-  width: 6.5rem;
-  top: 0.1rem;
-  margin: auto;
-  position: relative;
-  z-index: 10;
-}
-#main-scene .top-list img {
-  width: 100%;
-}
 #main-scene .canvas {
   width: 5.3rem;
   margin: auto;
@@ -226,6 +217,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 3rem;
   top: 0.05rem;
   left: 1.1rem;
+}
+
+.top-list {
+  width: 6.5rem;
+  top: 0.1rem;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+.top-list img {
+  width: 100%;
 }
 
 .left-list {
@@ -253,6 +255,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .left-list .left-iron > img {
   width: 90%;
   padding-top: 5%;
+}
+
+#top-mask {
+  position: absolute;
+  top: 0.1rem;
+  z-index: 11;
+  left: 50%;
+  margin-left: -3.25rem;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+}
+#top-mask > div {
+  -webkit-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+#top-mask .step p {
+  font-size: 30px;
+  width: 30px;
+  margin: auto;
+  line-height: 0.20rem;
+  margin-top: 0.15rem;
+  font-family: "方正喵呜体";
+  color: #BEAEAE;
+}
+#top-mask .step p [data-dpr="2"] div {
+  font-size: 60px;
+}
+#top-mask .step p [data-dpr="3"] div {
+  font-size: 90px;
+}
+#top-mask .arrow {
+  margin-top: 0.3rem;
+  color: #BEAEAE;
 }
 
 * {
