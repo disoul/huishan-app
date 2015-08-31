@@ -218,6 +218,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 0.05rem;
   left: 1.1rem;
 }
+#main-scene .nexticon {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #808EA9;
+}
+#main-scene .nexticon:hover {
+  background-color: #EC7F37;
+}
 
 .top-list {
   width: 6.5rem;
@@ -230,7 +244,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 
-.left-list {
+.left-list, .right-list {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -241,20 +255,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   align-items: center;
   margin: auto;
 }
-.left-list .left-iron {
+.left-list .left-icon, .right-list .left-icon {
   width: 85%;
-  -moz-border-radius: 4.25rem;
-  -webkit-border-radius: 4.25rem;
-  border-radius: 4.25rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   text-align: center;
   margin: 0.1rem 0 0.1rem 0;
 }
-.left-list .left-iron:hover {
+.left-list .left-icon:hover, .right-list .left-icon:hover {
   background-color: #DAAD72;
 }
-.left-list .left-iron > img {
+.left-list .left-icon > img, .right-list .left-icon > img {
   width: 90%;
   padding-top: 5%;
+}
+.left-list .right-icon, .right-list .right-icon {
+  width: 0.4rem;
+  height: 0.4rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0.2rem 0 0.2rem 0;
+  border: 0.03rem solid #EECE9C;
+}
+.left-list .right-icon:hover, .right-list .right-icon:hover {
+  border: 0.05rem solid #DAAD72;
 }
 
 #top-mask {

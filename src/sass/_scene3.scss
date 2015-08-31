@@ -59,6 +59,19 @@
 		}
 	}
 
+	.nexticon {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 1rem;
+		width: 0.8rem;
+		height: 0.8rem;
+		@include border-radius(50%);
+		background-color: $text-blue-2;
+		&:hover {
+			background-color: $text-origin;
+		}
+	}
+
 }
 .top-list {
 	width: 6.5rem;
