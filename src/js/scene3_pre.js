@@ -17,13 +17,19 @@ $(document).on("pageinit","#main-scene",function(){
 	});
 
 	$(".nexticon").on("tap",function(){
-		$(".left-list").animate({top: "-"+listHeight.toString()+"px"},function(){
-			step++;
-			domCreate(step);
+		$(".msgbx-mask").css("z-index","1000");
+		$(".msgbx-mask").css("opacity","1");
+		$(".msgbx-mask").on("tap",function(){
+			$(this).animate({opacity:"0"},function(){
+				$(this).css("z-index","-1000");
+			});
+			$(".left-list").animate({top: "-"+listHeight.toString()+"px"},function(){
+				step++;
+				domCreate(step);
+			});
+			$(".left-list").animate({top: "0"});
+			$(".right-list").animate({bottom: "-"+listHeight.toString()+"px"});
+			$(".right-list").animate({bottom: "0"});
 		});
-		$(".left-list").animate({top: "0"});
-		$(".right-list").animate({bottom: "-"+listHeight.toString()+"px"});
-		$(".right-list").animate({bottom: "0"});
 	});
-
 });

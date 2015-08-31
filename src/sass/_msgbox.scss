@@ -1,0 +1,29 @@
+@import "compass";
+
+.msgbx-mask {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
+	z-index: -1000;
+	@include display-flex;
+	background-color: rgba(white,0.6);
+	@include align-items(center);
+	transition: opacity 1s ease; 
+	opacity: 0;
+	.msg {
+		width: 4rem;
+		height: 2rem;
+		@include border-radius(0.4rem);
+		margin: auto; 
+		display: table;
+		background-color: #fff;
+		border: 0.05rem solid $text-origin;
+		text-align: center;
+		p {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+}
