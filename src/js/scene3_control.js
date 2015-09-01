@@ -28,7 +28,7 @@ function domCreate(step){
 		$("#right-control").css("height",$("#right-img").css("height"));
 		var face1_select = '<div class="left-icon" id="face1_select"><img src="./src/image/main-scene/face_select_1.png" alt=""></div>';
 		var face2_select = '<div class="left-icon" id="face2_select"><img src="./src/image/main-scene/face_select_2.png" alt=""></div>';
-		$("#left-control").append(face1_select,face2_select);
+		$("#left-control #container").append(face1_select,face2_select);
 		$(".left-icon").css("height",$(".left-icon").css("width"));
 
 
@@ -49,7 +49,7 @@ function domCreate(step){
 		var hair_select2 = '<div id="hair2_select" class="left-icon"><img src="./src/image/main-scene/hair_select_2.png" alt=""></div>';
 		var hair_select3 = '<div id="hair3_select" class="left-icon"><img src="./src/image/main-scene/hair_select_3.png" alt=""></div>';
 
-		$("#left-control").append(hair_select1,hair_select2,hair_select3);
+		$("#left-control #container").append(hair_select1,hair_select2,hair_select3);
 
 		//Add Events
 		tapEvent("hair1","hair");		
@@ -69,6 +69,39 @@ function domCreate(step){
 
 		//Create Right List
 		createRightList("clothes","521840","252E80");
+
+		//Change Text
+		$(".step:eq(1) p").css("color","#808EA9");
+		$(".step:eq(2) p").css("color","#EC7F37");
+		$(".arrow:eq(0)").css("color","#808EA9");
+		$(".arrow:eq(1)").css("color","#B26855");
+
+	}
+
+	if (step == 4){
+		//Create Left List
+		$(".left-icon").remove();
+		var pattern1 = '<div id="pattern1_select" class="left-icon"><img src="./src/image/main-scene/pattern_select_1.png" alt=""></div>';
+		var pattern2 = '<div id="pattern2_select" class="left-icon"><img src="./src/image/main-scene/pattern_select_2.png" alt=""></div>';
+		var pattern3 = '<div id="pattern3_select" class="left-icon"><img src="./src/image/main-scene/pattern_select_3.png" alt=""></div>';
+		var pattern4 = '<div id="pattern4_select" class="left-icon"><img src="./src/image/main-scene/pattern_select_4.png" alt=""></div>';
+		$("#left-control #container").append(pattern1,pattern2,pattern3,pattern4);
+
+		//Add Events
+		tapEvent("pattern1","pattern");
+		tapEvent("pattern2","pattern");
+		tapEvent("pattern3","pattern");
+		tapEvent("pattern4","pattern");
+
+		//Create Right List
+		$(".right-icon").remove();
+		
+		//Change Text
+		$(".step:eq(2) p").css("color","#808EA9");
+		$(".step:eq(3) p").css("color","#EC7F37");
+		$(".arrow:eq(1)").css("color","#808EA9");
+		$(".arrow:eq(2)").css("color","#B26855");
+
 	}
 }
 
