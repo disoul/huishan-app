@@ -61,6 +61,15 @@ function domCreate(step){
 		$(".step:eq(1) p").css("color","#EC7F37");
 		$(".arrow:eq(0)").css("color","#B26855");
 	}
+
+	if (step == 3){
+		//Create Left List
+		$(".left-icon").remove();
+		leftselect = "clothes";
+
+		//Create Right List
+		createRightList("clothes","521840","252E80");
+	}
 }
 
 function createRightList(){

@@ -56,6 +56,16 @@
 			width: 3rem;
 			top: 0.05rem;
 			left: 1.1rem;
+			z-index: 10;
+		}
+		#face {
+			z-index: 20;
+		}
+		#hair {
+			z-index: 25;
+		}
+		#clothes {
+			z-index: 15;
 		}
 	}
 

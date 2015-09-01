@@ -217,6 +217,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 3rem;
   top: 0.05rem;
   left: 1.1rem;
+  z-index: 10;
+}
+#main-scene .canvas #face {
+  z-index: 20;
+}
+#main-scene .canvas #hair {
+  z-index: 25;
+}
+#main-scene .canvas #clothes {
+  z-index: 15;
 }
 #main-scene .nexticon {
   position: absolute;
