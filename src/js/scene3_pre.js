@@ -2,7 +2,8 @@ var aniFlag = 0;
 var listHeight = 0;
 var step = 1;
 
-$(document).on("pageinit","#main-scene",function(){
+$(document).ready(function(){
+
 	$("#main-scene").on("tap",function(){
 		if (aniFlag != 0) return; 
 		aniFlag++;
@@ -34,4 +35,5 @@ $(document).on("pageinit","#main-scene",function(){
 			$(".right-list").animate({bottom: "0"});
 		});
 	});
+	
 });
