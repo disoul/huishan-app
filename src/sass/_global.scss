@@ -42,11 +42,11 @@
 @mixin fontsize($size) {
 	font-size: $size;
 
-	[data-dpr = "2"] div {
+	[data-dpr = "2"] {
 		font-size: $size * 2;
 	}
 
-	[data-dpr = "3"] div {
+	[data-dpr = "3"] {
 		font-size: $size * 3;
 	}
 }

@@ -677,7 +677,6 @@ IScroll.prototype = {
 		this.maxScrollX		= this.wrapperWidth - this.scrollerWidth;
 		this.maxScrollY		= (this.wrapperHeight - this.scrollerHeight) * lib.flexible.dpr;
 
-		alert(this.maxScrollY);
 
 /* REPLACE END: refresh */
 
