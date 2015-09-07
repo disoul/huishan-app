@@ -87,6 +87,7 @@ function domCreate(step){
 		var pattern4 = '<div id="pattern4_select" class="left-icon"><img src="./src/image/main-scene/pattern_select_4.png" alt=""></div>';
 		$("#left-control #container").append(pattern1,pattern2,pattern3,pattern4);
 
+		createScroll();
 		//Add Events
 		tapEvent("pattern1","pattern");
 		tapEvent("pattern2","pattern");

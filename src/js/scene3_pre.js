@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 	$(document).on("pageshow","#main-scene",function(){
 		domCreate(step);
-		createScroll();
 		listHeight = $(".left-list").height();
 		$("#left-control").css("height",$("#left-img img").css("height"));
 		$(".left-list").css("top","-"+listHeight.toString()+"px");
@@ -28,7 +27,6 @@ $(document).ready(function(){
 			$(this).css("z-index","-1000");
 			$(".left-list").animate({top: "-"+listHeight.toString()+"px"},function(){
 				domCreate(step);
-				createScroll();
 				$(".left-list").animate({top: "0"});
 			});
 			$(".right-list").animate({bottom: "-"+listHeight.toString()+"px"});

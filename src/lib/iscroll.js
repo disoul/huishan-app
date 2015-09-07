@@ -491,7 +491,6 @@ IScroll.prototype = {
 		deltaX = this.hasHorizontalScroll ? deltaX : 0;
 		deltaY = this.hasVerticalScroll ? deltaY : 0;
 
-		console.log(this.hasVerticalScroll);
 
 		newX = this.x + deltaX;
 		newY = this.y + deltaY;
@@ -676,9 +675,9 @@ IScroll.prototype = {
 		this.scrollerHeight	= this.scroller.offsetHeight;
 
 		this.maxScrollX		= this.wrapperWidth - this.scrollerWidth;
-		this.maxScrollY		= this.wrapperHeight - this.scrollerHeight;
+		this.maxScrollY		= (this.wrapperHeight - this.scrollerHeight) * lib.flexible.dpr;
 
-		console.log("max",this.maxScrollY);
+		alert(this.maxScrollY);
 
 /* REPLACE END: refresh */
 
@@ -693,8 +692,6 @@ IScroll.prototype = {
 		if ( !this.hasVerticalScroll ) {
 			this.maxScrollY = 0;
 			this.scrollerHeight = this.wrapperHeight;
-		}else{
-			this.options.startY = -70;
 		}
 
 		this.endTime = 0;

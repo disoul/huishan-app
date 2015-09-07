@@ -10,5 +10,6 @@ function createScroll(){
 
 
 	myScroll = new IScroll("#left-control",{
+		startY: -50
 	});
 }
