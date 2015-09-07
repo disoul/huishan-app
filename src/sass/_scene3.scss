@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 #main-scene {
 	@include scene("#000");
 	background-image: url('../image/main-scene/background.jpg');
@@ -35,7 +37,7 @@
 		right: 0.2rem;
 		width: 1rem;
 		z-index: 10;
-		transform: rotate(180deg);
+		@include rotate(180deg);
 		> img {
 			width: 100%;
 		}

@@ -202,6 +202,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   right: 0.2rem;
   width: 1rem;
   z-index: 10;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 #main-scene .right-list > img {
@@ -268,6 +271,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .left-list #container {
   left: 0;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 #container, .right-list {
@@ -347,6 +367,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #top-mask .arrow {
   margin-top: 0.3rem;
   color: #BEAEAE;
+  font-size: 30px;
+}
+#top-mask .arrow [data-dpr="2"] div {
+  font-size: 60px;
+}
+#top-mask .arrow [data-dpr="3"] div {
+  font-size: 90px;
 }
 
 .msgbx-mask {
@@ -361,6 +388,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-align-items: center;
   align-items: center;
   transition: opacity 1s ease;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 .msgbx-mask .msg {

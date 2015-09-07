@@ -1,4 +1,4 @@
-@import "compass";
+@import "compass/css3";
 
 .msgbx-mask {
 	height: 100%;
@@ -10,7 +10,7 @@
 	background-color: rgba(white,0.6);
 	@include align-items(center);
 	transition: opacity 1s ease; 
-	opacity: 0;
+	@include opacity(0);
 	.msg {
 		width: 4rem;
 		height: 2rem;
