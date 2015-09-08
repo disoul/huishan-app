@@ -13,8 +13,8 @@
 		height: 100%;	
 	}
 	.step p{
-		@include fontsize(30px);
-		width: 30px;
+		@include fontsize(0.25rem);
+		width: 0.25rem;
 		margin: auto;
 		line-height: 0.20rem;
 		margin-top: 0.15rem;
@@ -25,6 +25,6 @@
 	.arrow {
 		margin-top: 0.3rem;
 		color: $text-blue-1;
-		@include fontsize(30px);
+		@include fontsize(0.25rem);
 	}
 }

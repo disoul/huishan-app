@@ -1,5 +1,7 @@
+var eventName,transitionFadeOut,onTransitionEnd;
+
 $(document).ready(function(){
-	var onTransitionEnd = function(e){ 
+	onTransitionEnd = function(e){ 
 		console.log('TRANSITION FINISHED');
 		if (callbackFlag){
 			callbackFlag = false;
@@ -8,10 +10,15 @@ $(document).ready(function(){
 		}
 	
 	}
-	var eventName = document.body.style.webkitBorderRadius?
+	eventName = document.body.style.webkitBorderRadius?
 	                "webkitTransitionEnd":
 	                "transitionend";
 	$(".left-list:not(#container)").bind(eventName, onTransitionEnd);
+
+	transitionFadeOut = function(e){
+		$(this).remove();
+
+	}
 
 
 

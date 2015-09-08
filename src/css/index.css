@@ -174,7 +174,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 #main-scene .background-circle {
   height: 30%;
-  position: absolute;
+  position: fixed;
   top: 35%;
 }
 #main-scene .background-circle img {
@@ -333,8 +333,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100%;
 }
 #top-mask .step p {
-  font-size: 30px;
-  width: 30px;
+  font-size: 0.25rem;
+  width: 0.25rem;
   margin: auto;
   line-height: 0.20rem;
   margin-top: 0.15rem;
@@ -342,21 +342,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #BEAEAE;
 }
 #top-mask .step p [data-dpr="2"] {
-  font-size: 60px;
+  font-size: 0.5rem;
 }
 #top-mask .step p [data-dpr="3"] {
-  font-size: 90px;
+  font-size: 0.75rem;
 }
 #top-mask .arrow {
   margin-top: 0.3rem;
   color: #BEAEAE;
-  font-size: 30px;
+  font-size: 0.25rem;
 }
 #top-mask .arrow [data-dpr="2"] {
-  font-size: 60px;
+  font-size: 0.5rem;
 }
 #top-mask .arrow [data-dpr="3"] {
-  font-size: 90px;
+  font-size: 0.75rem;
 }
 
 .msgbx-mask {
