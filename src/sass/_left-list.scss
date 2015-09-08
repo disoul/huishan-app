@@ -2,12 +2,14 @@
 
 .left-list {
 	overflow: hidden;
+	-webkit-transition: translateZ(0);
 	#container {
 		left: 0;
 	}
 }
 
 .right-list {
+	-webkit-transition: translateZ(0);
 }
 
 #container,.right-list {
