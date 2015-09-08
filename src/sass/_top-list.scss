@@ -12,7 +12,7 @@
 		@include flex(1);
 		height: 100%;	
 	}
-	.step p{
+	p{
 		@include fontsize(0.25rem);
 		width: 0.25rem;
 		margin: auto;
@@ -26,5 +26,13 @@
 		margin-top: 0.3rem;
 		color: $text-blue-1;
 		@include fontsize(0.25rem);
+	}
+
+	.complete p{
+		@include fontsize(0.3rem);
+		width: 0.3rem;
+		display: none;
+		line-height: 0.30rem;
+		color: #ff6666;
 	}
 }

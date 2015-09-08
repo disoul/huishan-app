@@ -102,8 +102,85 @@ function domCreate(step){
 		$(".step:eq(3) p").css("color","#EC7F37");
 		$(".arrow:eq(1)").css("color","#808EA9");
 		$(".arrow:eq(2)").css("color","#B26855");
+	}
+
+	if (step == 5) {
+		//Create Left List 
+		$(".left-icon").remove();
+		
+		//Creat Right List
+		$(".right-icon").remove();
+		createRightList("pant","DD564B","D1155C");
+
+		//Change Text
+		$(".step:eq(3) p").css("color","#808EA9");
+		$(".step:eq(4) p").css("color","#EC7F37");
+		$(".arrow:eq(2)").css("color","#808EA9");
+		$(".arrow:eq(3)").css("color","#B26855");
+	}
+
+	if (step == 6) {
+		//Create Left List
+		$(".left-icon").remove();
+		var decoration1 = '<div id="decoration1_select" class="left-icon"><img src="./src/image/main-scene/decoration_select_1" alt=""></div>';
+		var decoration2 = '<div id="decoration2_select" class="left-icon"><img src="./src/image/main-scene/decoration_select_2" alt=""></div>';
+		var decoration3 = '<div id="decoration3_select" class="left-icon"><img src="./src/image/main-scene/decoration_select_3" alt=""></div>';
+
+		$("#left-control #container").append(decoration1,decoration2,decoration3);
+
+		//Creat Right List
+		$(".right-icon").remove();
+
+		//Add Events
+		tapEvent("decoration1", "decoration");
+		tapEvent("decoration2", "decoration");
+		tapEvent("decoration3", "decoration");
+
+		//Change Text
+		$(".step:eq(4) p").css("color","#808EA9");
+		$(".step:eq(5) p").css("color","#EC7F37");
+		$(".arrow:eq(3)").css("color","#808EA9");
+		$(".arrow:eq(4)").css("color","#B26855");
 
 	}
+
+	if (step == 7) {
+		
+		$(".step:eq(5) p").css("color","#808EA9");
+		$(".arrow:eq(4)").css("color","#808EA9");
+		$(".complete p").css("display","block");
+		
+	}
+
+	//Pre
+	if (step == 0) {
+		$("#left-control").css("height",$("#left-img").css("height"));
+		$("#right-control").css("height",$("#right-img").css("height"));
+	}
+
+	//Creat Left List 
+	$(".left-icon").remove();
+	for (var i = 0; i++; i < data[step].num) {
+		var select = '<div id="'+data[step].name+(i+1).toString()+'_select" class="left-icon"><img src="./src/image/main-scene/'+data[step].name+'_select_'+(i+1).toString()+'" alt=""></div>';
+		$("#left-control #container").append(select);
+		
+		//Add Events
+		tapEvent(data[step].name+i.toString(),data[step].name);
+	}
+
+	//Creat Right List
+	$(".right-icon").remove();
+	if (data[step].right != undefined) {
+		createRightList(data[step].name,data[step].right[0],data[step].right[1]);
+	}
+
+	//Change Text	
+	$(".step:eq("+(step-1).toString()+") p").css("color","#808EA9");
+	$(".step:eq("+step.toString()+") p").css("color","#EC7F37");
+	$(".arrow:eq("+(step-2).toString()+")").css("color","#808EA9");
+	$(".arrow:eq("+(step-1).toString()+")").css("color","#B26855");
+	
+	
 }
 
 function createRightList(){
