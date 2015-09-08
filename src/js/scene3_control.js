@@ -22,6 +22,7 @@ function chageImg(name,id){
 }
 
 function domCreate(step){
+/*
 	if (step == 1){
 		//Creat List
 		$("#left-control").css("height",$("#left-img").css("height"));
@@ -151,17 +152,25 @@ function domCreate(step){
 		$(".complete p").css("display","block");
 		
 	}
-
+*/
 	//Pre
 	if (step == 0) {
 		$("#left-control").css("height",$("#left-img").css("height"));
 		$("#right-control").css("height",$("#right-img").css("height"));
 	}
 
+	if (step == 6) {
+		$(".step:eq(5) p").css("color","#808EA9");
+		$(".arrow:eq(4)").css("color","#808EA9");
+		$(".complete p").css("display","block");
+		return;
+	}
+
 	//Creat Left List 
 	$(".left-icon").remove();
-	for (var i = 0; i++; i < data[step].num) {
-		var select = '<div id="'+data[step].name+(i+1).toString()+'_select" class="left-icon"><img src="./src/image/main-scene/'+data[step].name+'_select_'+(i+1).toString()+'" alt=""></div>';
+	for (var i = 0; i < data[step].num; i++) {
+		console.log(data[step].num);
+		var select = '<div id="'+data[step].name+(i+1).toString()+'_select" class="left-icon"><img src="./src/image/main-scene/'+data[step].name+'_select_'+(i+1).toString()+'.png" alt=""></div>';
 		$("#left-control #container").append(select);
 		
 		//Add Events
@@ -171,7 +180,8 @@ function domCreate(step){
 	//Creat Right List
 	$(".right-icon").remove();
 	if (data[step].right != undefined) {
-		createRightList(data[step].name,data[step].right[0],data[step].right[1]);
+		leftselect = data[step].name;
+		createRightList(leftselect,data[step].right[0],data[step].right[1]);
 	}
 
 	//Change Text	
@@ -187,6 +197,7 @@ function createRightList(){
 	$(".right-icon").remove();
 
 	rightselect = arguments[1];
+	console.log(rightselect);
 	var id = Array().shift.call(arguments);
 	Array().slice.call(arguments).forEach(function(color){
 		var colorblock = '<div class="right-icon" id="color-'+color+'" style="background-color:#'+color+';"></div>';

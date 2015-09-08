@@ -1,5 +1,5 @@
 var listHeight = 0;
-var step = 1;
+var step = 0;
 var callbackFlag = false;
 
 $(document).ready(function(){
