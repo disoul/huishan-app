@@ -1,4 +1,4 @@
-var eventName,transitionFadeOut,onTransitionEnd;
+var eventName,transitionFadeOut,onTransitionEnd,paperTransitionEnd;
 
 $(document).ready(function(){
 	onTransitionEnd = function(e){ 
@@ -19,7 +19,10 @@ $(document).ready(function(){
 		$(this).remove();
 
 	}
-
-
+	paperTransitionEnd = function(e){
+		$("#introduce-2-scene .model").fadeIn(function(){
+			$("#paper2").css("top", "0");
+		});
+	}
 
 });

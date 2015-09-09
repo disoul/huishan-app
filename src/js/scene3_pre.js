@@ -5,7 +5,7 @@ var model = 'o';
 
 $(document).ready(function(){
 	$(document).on("pageinit", "#main-scene", function(){
-		var img = '<img src="./src/image/main-scene/'+model+'model.png" alt="">';
+		var img = '<img src="./src/image/main-scene/'+model+'/'+'model.png" alt="">';
 		$("#ni").append(img);
 	});
 

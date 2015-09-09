@@ -11,6 +11,7 @@
 	<script src="./src/lib/jquery-mobile.js"></script>
 	<script src="./src/lib/iscroll.js"></script>
 	<script src="./src/js/stepdata.js"></script>
+	<script src="./src/js/introduce.js"></script>
 	<script src="./src/js/scene3_control.js"></script>
 	<script src="./src/js/scene3_pre.js"></script>
 	<script src="./src/js/scroll.js"></script>
@@ -43,11 +44,26 @@
 	</div>
 
 	<div id="introduce-scene" class="scene" data-role="page">
+		<div class="wrapper">
+			<div class="paper">
+				<img src="./src/image/introduce-scene/paper-introduce.png" alt=""></div>
+		</div>
+	</div>
+
+	<div id="introduce-2-scene" class="scene" data-role="page">
 		<div id="girls"><img src="./src/image/introduce-scene/girl.png" alt=""></div>
 		<div id="table">
 			<img src="./src/image/introduce-scene/table.png" alt="">
 			<div class="parts"></div>
 		</div>
+		<div class="paper" id="paper1">
+			<img src="./src/image/introduce-scene/paper1.png" alt="">
+		</div>
+		<div class="paper" id="paper2">
+			<img src="./src/image/introduce-scene/paper2.png" alt="">
+		</div>
+		<a id="model1" class="model" href="#main-scene" date-transition="slide"></a>
+		<a id="model2" class="model" href="#main-scene" data-transition="slide"></a>
 	</div>
 
 	<div id="main-scene" class="scene" data-role="page">

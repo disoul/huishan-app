@@ -1,0 +1,58 @@
+@mixin modelimg($name) {
+	$src: '../image/introduce-scene/' + $name + '.png';
+	background-image: url($src);
+	&:hover {
+		$src: '../image/introduce-scene/' + $name + '_hover.png';
+		background-image: url($src);
+	}
+}
+
+#introduce-2-scene {
+	@include scene(#000);
+	background-image: url('../image/introduce-scene/bg.png');
+	background-size: 100% 100%;
+	overflow: hidden;
+	#table {
+		position: absolute;
+		bottom: -0.2rem;
+		width: 100%;
+		> img {
+			width: 100%;
+		}
+	}
+	#girls {
+		position: absolute;
+		bottom: -0.1rem;
+		width: 2rem;
+		right: 4rem;
+		img {
+			width: 100%;
+		}
+	}
+	.paper {
+		position: absolute;
+		top: -3.3rem;
+		right: 0.2rem;
+		height: 3.3rem;
+		transition: top 1s ease;
+		img {
+			height: 100%;
+		}
+	}
+	.model {
+		position: absolute;
+		bottom: 0;
+		width: 1.2rem;
+		height: 1.2rem;
+		background-size: 100% 100%;
+		display: none;
+	}
+	#model1 {
+		right: 4rem;
+		@include modelimg(model1);
+	}
+	#model2 {
+		right: 2rem;
+		@include modelimg(model2);
+	}
+}

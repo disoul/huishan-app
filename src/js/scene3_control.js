@@ -4,7 +4,7 @@ var leftselect = '',
 function tapEvent(element,id){
 	$("#"+element+"_select").on("tap",function(){
 		leftselect = element;
-		if (element == "hair1"){
+		if ((element == "hair1") && (model == "o")){
 			createRightList(id,["6BB7CA","ABB368"]);
 		}else{
 			rightselect = '';
@@ -16,8 +16,11 @@ function tapEvent(element,id){
 function chageImg(name,id){
 	$("#"+id).fadeOut();
 	$("#"+id).remove();
-	var decoration = '<div style="display:none;" id="'+id+'" class="model"><img src="./src/image/main-scene/'+model+name+'.png"></div>';
+	var decoration = '<div style="display:none;" id="'+id+'" class="model"><img src="./src/image/main-scene/'+model+'/'+name+'.png"></div>';
 	$(".canvas").append(decoration);
+
+	if (name == 'hair2') $("#"+id).css("top","-0.32rem"); // bug
+	
 	$("#"+id).fadeIn();
 }
 
@@ -39,7 +42,7 @@ function domCreate(step){
 	$(".left-icon").remove();
 	for (var i = 0; i < data[step].num; i++) {
 		console.log(data[step].num);
-		var select = '<div id="'+data[step].name+(i+1).toString()+'_select" class="left-icon"><img src="./src/image/main-scene/'+model+data[step].name+'_select_'+(i+1).toString()+'.png" alt=""></div>';
+		var select = '<div id="'+data[step].name+(i+1).toString()+'_select" class="left-icon"><img src="./src/image/main-scene/'+model+'/'+data[step].name+'_select_'+(i+1).toString()+'.png" alt=""></div>';
 		$("#left-control #container").append(select);
 		
 		//Add Events
@@ -48,9 +51,13 @@ function domCreate(step){
 
 	//Creat Right List
 	$(".right-icon").remove();
-	if (data[step].right != undefined) {
+	if ((data[step].right != undefined) && model == 'o') {
 		leftselect = data[step].name;
 		createRightList(leftselect,data[step].right);
+	}
+	if ((data[step].uright != undefined) && model == 'u') {
+		leftselect = data[step].name;
+		createRightList(leftselect,data[step].uright);
 	}
 
 	//Change Text	
