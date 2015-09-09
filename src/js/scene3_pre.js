@@ -1,8 +1,13 @@
 var listHeight = 0;
 var step = 0;
 var callbackFlag = false;
+var model = 'o';
 
 $(document).ready(function(){
+	$(document).on("pageinit", "#main-scene", function(){
+		var img = '<img src="./src/image/main-scene/'+model+'model.png" alt="">';
+		$("#ni").append(img);
+	});
 
 	$(document).on("pageshow","#main-scene",function(){
 		domCreate(step);

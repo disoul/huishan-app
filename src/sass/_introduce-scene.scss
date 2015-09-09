@@ -1,0 +1,23 @@
+#introduce-scene {
+	@include scene(#000);
+	background-image: url('../image/introduce-scene/bg.jpg');
+	background-size: 100% 100%;
+	overflow: hidden;
+	#table {
+		position: absolute;
+		bottom: -0.2rem;
+		width: 100%;
+		> img {
+			width: 100%;
+		}
+	}
+	#girls {
+		position: absolute;
+		bottom: -0.1rem;
+		width: 2rem;
+		right: 4rem;
+		img {
+			width: 100%;
+		}
+	}
+}

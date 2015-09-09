@@ -159,6 +159,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 
+#introduce-scene {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../image/introduce-scene/bg.jpg");
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+#introduce-scene #table {
+  position: absolute;
+  bottom: -0.2rem;
+  width: 100%;
+}
+#introduce-scene #table > img {
+  width: 100%;
+}
+#introduce-scene #girls {
+  position: absolute;
+  bottom: -0.1rem;
+  width: 2rem;
+  right: 4rem;
+}
+#introduce-scene #girls img {
+  width: 100%;
+}
+
 #main-scene {
   height: 100%;
   width: 100%;
@@ -240,6 +271,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #main-scene .canvas #pattern {
   z-index: 16;
 }
+#main-scene .canvas #pant {
+  z-index: 17;
+}
+#main-scene .canvas #decoration {
+  z-index: 26;
+}
 #main-scene .nexticon {
   position: absolute;
   bottom: 0.5rem;
@@ -268,9 +305,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .left-list {
   overflow: hidden;
+  -webkit-transition: translateZ(0);
 }
 .left-list #container {
   left: 0;
+}
+
+.right-list {
+  -webkit-transition: translateZ(0);
 }
 
 #container, .right-list {
