@@ -1,12 +1,5 @@
 $(document).on("pageinit", "#introduce-scene", function(){
-	var tapflag = false;
-	$("body").on("tap",function(){
-		$("#introduce-scene .wrapper").css("opacity", "1");
-		if (tapflag) {
-			location.href = '#introduce-2-scene';
-		}
-		tapflag = true;
-	});
+	setTimeout('$("#introduce-scene .wrapper").css("z-index", "1");$("#introduce-scene .wrapper").css("opacity", "1");',1000);
 });
 
 $(document).on("pageshow", "#introduce-2-scene", function(){
@@ -21,8 +14,18 @@ $(document).on("pageshow", "#introduce-2-scene", function(){
 
 	$("#model1").on("tap", function(){
 		model = 'o';
+		$("#ni img").remove();
+		$(".canvas div:not(#ni)").remove();
+		step = 0;
+		var img = '<img src="./src/image/main-scene/'+model+'/'+'model.png" alt="">    ';
+		$("#ni").append(img);
 	});
 	$("#model2").on("tap", function(){
 		model = 'u';
+		$("#ni img").remove();
+		$(".canvas div:not(#ni)").remove();
+		step = 0;
+		var img = '<img src="./src/image/main-scene/'+model+'/'+'model.png" alt="">    ';
+		$("#ni").append(img);
 	});
 });

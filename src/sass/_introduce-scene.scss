@@ -17,8 +17,9 @@
 		background-color: rgba(black,0.6);
 		opacity: 0;
 		transition: opacity 0.5s ease;
+		z-index: -100;
 		.paper {
-			width: 6rem;
+			width: 7.5rem;
 			img {
 				width: 100%;
 			}

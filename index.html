@@ -14,7 +14,7 @@
 	<script src="./src/js/introduce.js"></script>
 	<script src="./src/js/scene3_control.js"></script>
 	<script src="./src/js/scene3_pre.js"></script>
-	<script src="./src/js/scroll.js"></script>
+	<script src="./src/js/share.js"></script>
 	<script src="./src/js/animation.js"></script>
 
 
@@ -45,8 +45,9 @@
 
 	<div id="introduce-scene" class="scene" data-role="page">
 		<div class="wrapper">
-			<div class="paper">
-				<img src="./src/image/introduce-scene/paper-introduce.png" alt=""></div>
+			<a class="paper" href="#introduce-2-scene">
+				<img src="./src/image/introduce-scene/paper-introduce.png" alt="">
+			</a>
 		</div>
 	</div>
 
@@ -62,8 +63,8 @@
 		<div class="paper" id="paper2">
 			<img src="./src/image/introduce-scene/paper2.png" alt="">
 		</div>
-		<a id="model1" class="model" href="#main-scene" date-transition="slide"></a>
-		<a id="model2" class="model" href="#main-scene" data-transition="slide"></a>
+		<a id="model1" class="model" href="#main-scene"></a>
+		<a id="model2" class="model" href="#main-scene"></a>
 	</div>
 
 	<div id="main-scene" class="scene" data-role="page">
@@ -90,17 +91,18 @@
 			<div class="complete"><p>完成</p></div>
 		</div>
 		<div class="canvas">
-			<img src="./src/image/main-scene/canvas.png" alt="">
+			<img id="canvaspaper" src="./src/image/main-scene/canvas.png" alt="">
 			<div class="model" id="ni">
 			</div>
 		</div>
 		<div class="nexticon">
 		</div>
-		<div class="msgbx-mask">
-			<div class="msg">
-				<p>233333333</p>
-			</div>
+		<div class="preicon">
 		</div>
+	</div>
+
+	<div id="share-scene" class="scene" data-role="page">
+		
 	</div>
 </body>
 </html>

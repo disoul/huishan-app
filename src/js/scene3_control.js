@@ -1,5 +1,6 @@
 var leftselect = '',
-	rightselect = '';
+	rightselect = '',
+	domCreateflag = true;
 
 function tapEvent(element,id){
 	$("#"+element+"_select").on("tap",function(){
@@ -8,6 +9,7 @@ function tapEvent(element,id){
 			createRightList(id,["6BB7CA","ABB368"]);
 		}else{
 			rightselect = '';
+			$(".right-icon").remove();
 		}
 		chageImg(leftselect+rightselect,id);
 	})
@@ -19,23 +21,57 @@ function chageImg(name,id){
 	var decoration = '<div style="display:none;" id="'+id+'" class="model"><img src="./src/image/main-scene/'+model+'/'+name+'.png"></div>';
 	$(".canvas").append(decoration);
 
-	if (name == 'hair2') $("#"+id).css("top","-0.32rem"); // bug
+	if ((name == 'hair2') && (model == 'o')) $("#"+id).css("top","-0.32rem"); // bug
 	
 	$("#"+id).fadeIn();
 }
 
 function domCreate(step){
 	//Pre
-	if (step == 0) {
+	if (domCreateflag) {
+		domCreateflag = false;
 		$("#left-control").css("height",$("#left-img").css("height"));
 		$("#right-control").css("height",$("#right-img").css("height"));
+
+		$("#top-mask .step").each(function(){
+			this.state = 'no';  //no or visit or now
+		});
+		$("#top-mask .arrow").each(function(){
+			this.isme = false;
+		})  //Add Dom attr
 	}
 
 	if (step == 6) {
 		$(".step:eq(5) p").css("color","#808EA9");
 		$(".arrow:eq(4)").css("color","#808EA9");
 		$(".complete p").css("display","block");
+		setTimeout('$.mobile.changePage( "#share-scene", {});', 1000)
 		return;
+	}
+
+	//Change Test
+	$(".step").each(function(){
+		console.log(this.state);
+		if ( this.state == 'now' ) {
+			this.state = 'visit';
+			this.firstChild.style.color = '#808EA9';
+		}
+	});
+	var nowtext = $(".step:eq("+step.toString()+")");
+	nowtext[0].state = 'now';
+    nowtext.find('p').css('color', '#EC7F37');	
+
+	//Change Arrow
+	$(".arrow").each(function(){
+		if ( this.isme == true ) {
+			this.isme = false;
+			this.firstChild.style.color = '#BEAEAE';
+		}
+	});
+	if (step > 0) {
+		var nowarrow = $(".arrow:eq("+(step-1).toString()+")");
+		nowarrow[0].isme = true;
+		nowarrow.find('span').css('color', '#B26855');
 	}
 
 	//Creat Left List 
@@ -61,10 +97,6 @@ function domCreate(step){
 	}
 
 	//Change Text	
-	$(".step:eq("+(step-1).toString()+") p").css("color","#808EA9");
-	$(".step:eq("+step.toString()+") p").css("color","#EC7F37");
-	$(".arrow:eq("+(step-2).toString()+")").css("color","#808EA9");
-	$(".arrow:eq("+(step-1).toString()+")").css("color","#B26855");
 	
 	
 }
