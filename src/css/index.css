@@ -384,12 +384,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 1.2rem;
 }
 
+#share-scene {
+  @scene (#000);
+  background-image: url("../image/share-scene/background.jpg");
+  background-size: 100% 100%;
+}
 #share-scene .canvas {
-  right: 11rem;
-  top: -1.3rem;
+  right: 4.7rem;
+  top: 1rem;
 }
 #share-scene .canvas .model {
-  width: 1.5rem;
+  width: 2.5rem;
+}
+#share-scene .wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#share-scene .text {
+  margin-left: 0.5rem;
+  width: 5.5rem;
+}
+#share-scene .text img {
+  width: 100%;
+}
+#share-scene .text2 {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 0.17rem;
+}
+#share-scene .text2 img {
+  width: 100%;
+}
+#share-scene .share {
+  width: 0.3rem;
+  border: 1px solid #808EA9;
+  padding: 0.05rem;
+  text-align: center;
+}
+#share-scene .share p {
+  font-family: "方正喵呜体";
+  font-size: 0.2rem;
+  color: #808EA9;
 }
 
 .left-list {

@@ -45,7 +45,7 @@ function domCreate(step){
 		$(".step:eq(5) p").css("color","#808EA9");
 		$(".arrow:eq(4)").css("color","#808EA9");
 		$(".complete p").css("display","block");
-		setTimeout('$.mobile.changePage( "#share-scene", {});', 1000)
+		setTimeout('$.mobile.changePage( "#share-scene", {changeHash: false});', 1000)
 		return;
 	}
 
