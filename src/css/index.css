@@ -332,6 +332,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .canvas .model img {
   width: 100%;
 }
+.canvas #shadow {
+  z-index: 5;
+  -moz-transform: translate(-0.1rem, 0);
+  -ms-transform: translate(-0.1rem, 0);
+  -webkit-transform: translate(-0.1rem, 0);
+  transform: translate(-0.1rem, 0);
+}
 .canvas #face {
   z-index: 20;
 }
@@ -424,8 +431,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 #share-scene .share {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.07rem;
   width: 0.3rem;
-  border: 1px solid #808EA9;
+  border: 2px solid #808EA9;
   padding: 0.05rem;
   text-align: center;
 }
@@ -581,4 +591,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#start-scene {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../image/select-scene/bg.jpg");
+  background-size: 100% 100%;
 }

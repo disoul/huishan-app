@@ -63,6 +63,10 @@
 				width: 100%;
 			}
 		}
+		#shadow {
+			z-index: 5;
+			@include translate(-0.1rem,0);
+		}
 		#face {
 			z-index: 20;
 		}

@@ -41,8 +41,11 @@
 	}
 
 	.share {
+		position: absolute;
+		right: 0.4rem;
+		top: 0.07rem;
 		width: 0.3rem;
-		border: 1px solid $text-blue-2;
+		border: 2px solid $text-blue-2;
 		padding: 0.05rem;
 		text-align: center;
 		p {

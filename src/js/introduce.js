@@ -15,14 +15,18 @@ $(document).on("pageshow", "#introduce-2-scene", function(){
 	$("#model1").on("tap", function(){
 		model = 'o';
 		$("#ni img").remove();
+		$("#shadow").remove();
 		$(".canvas div:not(#ni)").remove();
 		step = 0;
 		var img = '<img src="./src/image/main-scene/'+model+'/'+'model.png" alt="">    ';
+		var shadow = '<div id="shadow" class="model"><img src="./src/image/main-scene/o/model_sh.png" alt=""></div>';
+		$(".canvas").append(shadow);
 		$("#ni").append(img);
 	});
 	$("#model2").on("tap", function(){
 		model = 'u';
 		$("#ni img").remove();
+		$("#shadow").remove();
 		$(".canvas div:not(#ni)").remove();
 		step = 0;
 		var img = '<img src="./src/image/main-scene/'+model+'/'+'model.png" alt="">    ';
